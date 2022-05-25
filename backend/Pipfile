@@ -4,12 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "*"
 djangorestframework = "*"
-djangorestframework-jwt = "*"
 django-cors-headers = "*"
 python-decouple = "*"
 flake8 = "*"
+djangorestframework-simplejwt = "*"
+pyjwt = "*"
+django = "==3.2.9"
+faker = "*"
+factory-boy = "*"
 
 [dev-packages]
 
