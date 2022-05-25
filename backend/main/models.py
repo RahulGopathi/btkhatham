@@ -16,6 +16,7 @@ STATUS_CHOICES = (
     ("rejected", "Rejected"),
 )
 
+
 class Candidate(models.Model):
     # About section
     first_name = models.CharField(max_length=50)

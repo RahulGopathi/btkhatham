@@ -4,6 +4,7 @@ from django.db.utils import IntegrityError
 from fixture.userfixture import UserFactory
 from fixture.candidatefixture import CandidateFactory
 
+
 class Command(BaseCommand):
     help = 'Generates dummy data for testing purposes'
 
