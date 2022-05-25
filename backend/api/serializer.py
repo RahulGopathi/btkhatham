@@ -2,6 +2,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.password_validation import validate_password
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework import serializers
+from main.models import Candidate
 
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
@@ -40,3 +41,17 @@ class RegisterSerializer(serializers.ModelSerializer):
         user.save()
 
         return user
+
+
+class CandidateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Candidate
+        fields = ('id', 'first_name', 'last_name', 'resume', 'updated_at', 'status')
+        read_only_fields = ('id', 'created_at', 'updated_at')
+
+
+class IndividualCandidateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Candidate
+        fields = "__all__"
+        read_only_fields = ('id', 'created_at', 'updated_at')

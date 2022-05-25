@@ -22,7 +22,7 @@ class Candidate(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50, blank=True)
     primary_role = models.CharField(max_length=50, choices=PRIMARY_ROLE_CHOICES, default='full-stack-engineer')
-    experience = models.IntegerField()
+    experience = models.IntegerField(default=0)
     bio = models.TextField(max_length=200, blank=True)
 
     # Contact Info
@@ -44,7 +44,7 @@ class Candidate(models.Model):
     skills = models.TextField(help_text="Enter your skills, separated by comma.", max_length=1024, blank=True, null=True, default=None)
 
     # Metadata
-    resume = models.FileField(upload_to='uploads/resume/')
+    resume = models.FileField(upload_to='uploads/resume/', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=50, choices=STATUS_CHOICES, default='applied')
