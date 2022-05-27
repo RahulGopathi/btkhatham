@@ -95,8 +95,6 @@ export default function Register() {
             </Box>
           </Box>
 
-          {/* <RegisterForm /> */}
-
           <form onSubmit={handleSubmit}>
             <Stack spacing={3}>
               <TextField
@@ -106,7 +104,6 @@ export default function Register() {
                 onChange={(e) => setUsername(e.target.value)}
                 color="success"
                 required
-                fullwidth
               />
               <TextField
                 label="Password"
@@ -115,7 +112,6 @@ export default function Register() {
                 id="password"
                 color="success"
                 required
-                fullwidth
                 InputProps={{
                   endAdornment: (
                     <InputAdornment position="end">
@@ -127,7 +123,6 @@ export default function Register() {
                           icon={
                             showPassword ? 'eva:eye-fill' : 'eva:eye-off-fill'
                           }
-                          fullwidth
                         />
                       </IconButton>
                     </InputAdornment>
@@ -146,15 +141,9 @@ export default function Register() {
                 id="confirm-password"
                 color="success"
                 required
-                fullwidth
               />
 
-              <ButtonStyled
-                fullwidth
-                size="large"
-                type="submit"
-                variant="contained"
-              >
+              <ButtonStyled size="large" type="submit" variant="contained">
                 Register
               </ButtonStyled>
             </Stack>

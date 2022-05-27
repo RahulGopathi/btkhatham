@@ -100,14 +100,12 @@ export default function Login() {
                 id="username"
                 variant="outlined"
                 color="success"
-                fullwidth
               />
               <TextField
                 label="Password"
                 type={showPassword ? 'text' : 'password'}
                 id="password"
                 color="success"
-                fullwidth
                 InputProps={{
                   endAdornment: (
                     <InputAdornment position="end">
@@ -119,7 +117,6 @@ export default function Login() {
                           icon={
                             showPassword ? 'eva:eye-fill' : 'eva:eye-off-fill'
                           }
-                          fullwidth
                         />
                       </IconButton>
                     </InputAdornment>
@@ -127,12 +124,7 @@ export default function Login() {
                 }}
               />
 
-              <ButtonStyled
-                fullwidth
-                size="large"
-                type="submit"
-                variant="contained"
-              >
+              <ButtonStyled size="large" type="submit" variant="contained">
                 Login
               </ButtonStyled>
             </Stack>
