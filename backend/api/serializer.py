@@ -46,7 +46,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 class CandidateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Candidate
-        fields = ('id', 'first_name', 'last_name', 'resume', 'updated_at', 'status')
+        fields = ('id', 'first_name', 'last_name', 'primary_role', 'resume', 'updated_at', 'status')
         read_only_fields = ('id', 'created_at', 'updated_at')
 
 

@@ -14,13 +14,14 @@ STATUS_CHOICES = ["applied", "accepted", "rejected"]
 class CandidateFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = 'main.Candidate'
-        django_get_or_create = ('first_name', 'last_name', 'primary_role', 'experience', 'bio', 'email', 'phone', 'adress',
-                                'city', 'state', 'zipcode', 'country', 'projects', 'skills', 'status')
+        django_get_or_create = ('first_name', 'last_name', 'primary_role', 'education', 'experience', 'bio', 'email', 'phone', 'adress',
+                                'city', 'state', 'zipcode', 'country', 'projects', 'skills', 'status', 'website', 'linkedln', 'github')
 
     first_name = factory.Faker('first_name')
     last_name = factory.Faker('last_name')
     primary_role = factory.Faker('random_element', elements=PRIMARY_ROLE_CHOICES)
-    experience = random.randint(0, 10)
+    education = factory.Faker('sentence', nb_words=5)
+    experience = factory.Faker('sentence', nb_words=50)
     bio = factory.Faker('sentence', nb_words=20)
     email = factory.Faker('email')
     phone = random.randint(6000000000, 9999999999)
@@ -30,5 +31,8 @@ class CandidateFactory(factory.django.DjangoModelFactory):
     zipcode = factory.Faker('zipcode')
     country = factory.Faker('country')
     projects = factory.Faker('sentence', nb_words=50)
+    website = "http://example.com/"
+    linkedln = "http://example.com/" 
+    github = "https://github.com/" 
     skills = random.choice(SKILLS) + ', ' + random.choice(SKILLS) + ', ' + random.choice(SKILLS)
     status = factory.Faker('random_element', elements=STATUS_CHOICES)
