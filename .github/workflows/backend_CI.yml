@@ -21,9 +21,9 @@ jobs:
       postgres:
         image: postgres:10.8
         env:
-          POSTGRES_USER: cdcuser
-          POSTGRES_PASSWORD: cdcpassword
-          POSTGRES_DB: cdcdb
+          POSTGRES_USER: angeljobuser
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: angeljob
         ports:
         # will assign a random free host port
         - 5432:5432
