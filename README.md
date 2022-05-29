@@ -2,6 +2,14 @@
 
 An application with react and django for job reviewing processes
 
+Deployed at https://btkhatham.vercel.app
+
+- you can use the demo account to login into the app:
+```
+username: demo_angeljob
+password: demo1234
+```
+
 ## Steps to run locally
 
 - Clone this repository and launch code:
