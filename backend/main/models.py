@@ -1,13 +1,13 @@
 from django.db import models
 
 PRIMARY_ROLE_CHOICES = (
-    ('full-stack-engineer', 'Full-Stack Engineer'),
-    ('frontend-engineer', 'Frontend Engineer'),
-    ('backend-engineer', 'Backend Engineer'),
-    ('devops-engineer', 'DevOps Engineer'),
-    ('mobile-developer', 'Mobile Developer'),
-    ('data-engineer', 'Data Engineer'),
-    ('data-scientist', 'Data Scientist'),
+    ('Full-Stack Engineer', 'full-stack-engineer'),
+    ('Frontend Engineer', 'frontend-engineer'),
+    ('Backend Engineer', 'backend-engineer'),
+    ( 'DevOps Engineer', 'devops-engineer'),
+    ( 'Mobile Developer', 'mobile-developer'),
+    ('Data Engineer', 'data-engineer'),
+    ('Data Scientist', 'data-scientist'),
 )
 
 STATUS_CHOICES = (

@@ -3,15 +3,19 @@ import jwt_decode from 'jwt-decode';
 import dayjs from 'dayjs';
 import { useContext } from 'react';
 import AuthContext from '../contexts/AuthContext';
+import { API_BASE_URL } from '../config';
 
-const baseURL = 'http://127.0.0.1:8000/api';
+const baseURL = API_BASE_URL;
 
 const useAxios = () => {
   const { authTokens, setUser, setAuthTokens } = useContext(AuthContext);
 
   const axiosInstance = axios.create({
     baseURL,
-    headers: { Authorization: `Bearer ${authTokens?.access}` },
+    headers: {
+      Authorization: `Bearer ${authTokens?.access}`,
+      'Content-Type': 'multipart/form-data',
+    },
   });
 
   axiosInstance.interceptors.request.use(async (req) => {

@@ -5,9 +5,9 @@ import Login from './views/Login';
 import Register from './views/Register';
 import Dashboard from './views/Dashboard';
 import { Toaster } from 'react-hot-toast';
-import NavBar from "./components/Navbar/NavBar";
+import NavBar from './components/Navbar/NavBar';
 import AddCandidate from './views/AddCandidate';
-import IndividualCandidate from './views/IndividualCandidate'
+import IndividualCandidate from './views/IndividualCandidate';
 
 function App() {
   return (
@@ -29,16 +29,26 @@ function App() {
                 </div>
               }
             />
-            <Route path='/addCandidate' element={<ProtectedRoute>
-              {' '}
-              <NavBar />
-              <AddCandidate />{' '}
-            </ProtectedRoute>}></Route>
-            <Route path='/candidate/:id' element={<ProtectedRoute>
-              {' '}
-              <NavBar />
-              <IndividualCandidate />{' '}
-            </ProtectedRoute>}></Route>
+            <Route
+              path="/addCandidate"
+              element={
+                <ProtectedRoute>
+                  {' '}
+                  <NavBar />
+                  <AddCandidate />{' '}
+                </ProtectedRoute>
+              }
+            ></Route>
+            <Route
+              path="/candidate/:id"
+              element={
+                <ProtectedRoute>
+                  {' '}
+                  <NavBar />
+                  <IndividualCandidate />{' '}
+                </ProtectedRoute>
+              }
+            ></Route>
           </Routes>
           <Toaster />
         </AuthProvider>

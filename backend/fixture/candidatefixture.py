@@ -2,8 +2,7 @@ import factory
 import factory.fuzzy
 import random
 
-PRIMARY_ROLE_CHOICES = ['full-stack-engineer', 'frontend-engineer', 'backend-engineer', 'devops-engineer', 'mobile-developer',
-                        'data-engineer', 'data-scientist']
+PRIMARY_ROLE_CHOICES = ['Full-Stack Engineer', 'Frontend Engineer', 'Backend Engineer',  'DevOps Engineer',  'Mobile Developer', 'Data Engineer', 'Data Scientist']
 
 SKILLS = ["Javascript", "Node.js", "Nginx", "AWS", "EC2", "S3", "DynamoDB", "Docker",
           "React.js", "Vue.Js", "Python", "Django", "Flask", "Docker", "Docker Compose", "Kubernetes"]
