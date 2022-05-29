@@ -1,13 +1,13 @@
 from django.db import models
 
 PRIMARY_ROLE_CHOICES = (
-    ('full-stack-engineer', 'Full-Stack Engineer'),
-    ('frontend-engineer', 'Frontend Engineer'),
-    ('backend-engineer', 'Backend Engineer'),
-    ('devops-engineer', 'DevOps Engineer'),
-    ('mobile-developer', 'Mobile Developer'),
-    ('data-engineer', 'Data Engineer'),
-    ('data-scientist', 'Data Scientist'),
+    ('Full-Stack Engineer', 'full-stack-engineer'),
+    ('Frontend Engineer', 'frontend-engineer'),
+    ('Backend Engineer', 'backend-engineer'),
+    ('DevOps Engineer', 'devops-engineer'),
+    ('Mobile Developer', 'mobile-developer'),
+    ('Data Engineer', 'data-engineer'),
+    ('Data Scientist', 'data-scientist'),
 )
 
 STATUS_CHOICES = (
@@ -22,7 +22,8 @@ class Candidate(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50, blank=True)
     primary_role = models.CharField(max_length=50, choices=PRIMARY_ROLE_CHOICES, default='full-stack-engineer')
-    experience = models.IntegerField(default=0)
+    experience = models.CharField(max_length=500)
+    education = models.CharField(max_length=100)
     bio = models.TextField(max_length=200, blank=True)
 
     # Contact Info
