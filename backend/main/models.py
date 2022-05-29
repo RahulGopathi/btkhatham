@@ -4,8 +4,8 @@ PRIMARY_ROLE_CHOICES = (
     ('Full-Stack Engineer', 'full-stack-engineer'),
     ('Frontend Engineer', 'frontend-engineer'),
     ('Backend Engineer', 'backend-engineer'),
-    ( 'DevOps Engineer', 'devops-engineer'),
-    ( 'Mobile Developer', 'mobile-developer'),
+    ('DevOps Engineer', 'devops-engineer'),
+    ('Mobile Developer', 'mobile-developer'),
     ('Data Engineer', 'data-engineer'),
     ('Data Scientist', 'data-scientist'),
 )

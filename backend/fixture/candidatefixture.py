@@ -2,7 +2,8 @@ import factory
 import factory.fuzzy
 import random
 
-PRIMARY_ROLE_CHOICES = ['Full-Stack Engineer', 'Frontend Engineer', 'Backend Engineer',  'DevOps Engineer',  'Mobile Developer', 'Data Engineer', 'Data Scientist']
+PRIMARY_ROLE_CHOICES = ['Full-Stack Engineer', 'Frontend Engineer', 'Backend Engineer',
+                        'DevOps Engineer',  'Mobile Developer', 'Data Engineer', 'Data Scientist']
 
 SKILLS = ["Javascript", "Node.js", "Nginx", "AWS", "EC2", "S3", "DynamoDB", "Docker",
           "React.js", "Vue.Js", "Python", "Django", "Flask", "Docker", "Docker Compose", "Kubernetes"]
@@ -31,7 +32,7 @@ class CandidateFactory(factory.django.DjangoModelFactory):
     country = factory.Faker('country')
     projects = factory.Faker('sentence', nb_words=50)
     website = "http://example.com/"
-    linkedln = "http://example.com/" 
-    github = "https://github.com/" 
+    linkedln = "http://example.com/"
+    github = "https://github.com/"
     skills = random.choice(SKILLS) + ', ' + random.choice(SKILLS) + ', ' + random.choice(SKILLS)
     status = factory.Faker('random_element', elements=STATUS_CHOICES)
