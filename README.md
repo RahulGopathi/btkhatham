@@ -2,7 +2,7 @@
 
 An application with react and django for job reviewing processes
 
-Deployed at https://btkhatham.vercel.app
+Deployed at [job-reviewing-application.vercel.app](https://job-reviewing-application.vercel.app/)
 
 - you can use the demo account to login into the app:
 ```
