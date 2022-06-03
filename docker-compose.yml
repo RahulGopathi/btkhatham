@@ -25,6 +25,27 @@ services:
       - |
         python manage.py migrate
         python manage.py runserver 0.0.0.0:8000
+  react:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    image: angeljob/frontend
+    container_name: react
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - BACKEND_HOST=django
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+    - 3000:3000
+    volumes:
+    - ./frontend:/app
+    - /app/node_modules
+    depends_on:
+      - django
+    networks:
+      - app-network
+    command: npm start
   postgresql:
     image: 'bitnami/postgresql:latest'
     container_name: postgresql
