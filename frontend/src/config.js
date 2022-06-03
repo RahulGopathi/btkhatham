@@ -1,1 +1,1 @@
-export const API_BASE_URL = 'https://angeljob.rahulgopathi.tech/api';
+export const API_BASE_URL = 'https://rahulgopathi123.pythonanywhere.com/api';
