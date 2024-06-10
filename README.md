@@ -1,8 +1,14 @@
-# Angeljob
+# Angeljob - Job reviewing Application
 
-An application with react and django for job reviewing processes
+An application with react and django for job-reviewing processes
 
-Deployed at [job-reviewing-application.vercel.app](https://job-reviewing-application.vercel.app/)
+The features of this app include:
+- Authentication for recruiters
+- Page for candidates to fill in the details
+- Page for recruiters to see the details of the candidates
+- Options to filter candidates
+- option to update the status of the application to candidates
+- Uses REST API for communication
 
 - you can use the demo account to login into the app:
 ```
@@ -14,8 +20,8 @@ password: demo1234
 
 - Clone this repository and launch code:
     ```
-    git clone https://github.com/RahulGopathi/btkhatham.git
-    cd btkhatham
+    https://github.com/RahulGopathi/job-reviewing-application.git
+    cd job-reviewing-application
     code .
     ```
 
